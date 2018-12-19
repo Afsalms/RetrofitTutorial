@@ -1,12 +1,12 @@
 package com.example.qbuser.retrofittutorial.retrofit
 
-import com.example.qbuser.retrofittutorial.models.Country
+import com.example.qbuser.retrofittutorial.models.Post
 import retrofit2.http.GET
 import java.util.*
 
 interface RetrofitService {
 
-   @GET("countries")
-   fun getAllCountries(): Observable<ArrayList<Country>>
+   @GET("posts")
+   fun getAllPosts(): Observable<List<Post>>
 }
 
