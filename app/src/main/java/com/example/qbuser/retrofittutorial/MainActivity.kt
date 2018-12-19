@@ -34,13 +34,13 @@ class MainActivity : AppCompatActivity() {
         val response = a.getAllPosts()
         response.enqueue(object : Callback<List<Post>>{
             override fun onFailure(call: Call<List<Post>>, t: Throwable) {
-                Toast.makeText(this@MainActivity, "Added", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Error occured", Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
                 val data = response!!.body()
                 data!!.forEach { println(it.title)
-                                println("-----------------------")}
+                                println("-----------------------*******")}
                 }
         })
 
